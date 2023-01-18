@@ -23,6 +23,8 @@ public class MecanumTeleOp extends LinearOpMode {
         BLmotor = hardwareMap.get(DcMotor.class, "BL_DCmotor");
         BRmotor = hardwareMap.get(DcMotor.class, "BR_DCmotor");
 
+        waitForStart();
+
         while (opModeIsActive()) {
             //Map gamepad values to variables
             double drive = gamepad1.left_stick_y;
@@ -40,6 +42,8 @@ public class MecanumTeleOp extends LinearOpMode {
             FRmotor.setPower(FRPower);
             BLmotor.setPower(BLPower);
             BRmotor.setPower(BRPower);
+
+
 
         }
     }
