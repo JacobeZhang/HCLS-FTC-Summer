@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 @Autonomous
 public class Autonomous2 extends LinearOpMode {
@@ -28,21 +29,13 @@ public class Autonomous2 extends LinearOpMode {
         //code that runs when you hit the start button
 
         int encoderCounts = InchesToEC(24);
-
-        FLmotor.setTargetPosition(encoderCounts);
-        FRmotor.setTargetPosition(encoderCounts);
-        BLmotor.setTargetPosition(encoderCounts);
-        BRmotor.setTargetPosition(encoderCounts);
-
-        FLmotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        FRmotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        BLmotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-        BRmotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
-
-        FLmotor.setPower(1);
-        FRmotor.setPower(1);
-        BLmotor.setPower(1);
-        BRmotor.setPower(1);
+        ElapsedTime time = new ElapsedTime();
+        while (time.seconds() < 2) {
+            FLmotor.setPower(0.75);
+            FRmotor.setPower(0.75);
+            BLmotor.setPower(0.75);
+            BRmotor.setPower(0.75);
+        }
     }
 
     public int InchesToEC(int inches){
