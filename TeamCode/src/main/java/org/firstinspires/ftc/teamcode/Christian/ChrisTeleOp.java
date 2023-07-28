@@ -19,7 +19,7 @@ public class ChrisTeleOp extends LinearOpMode {
        frontRight = hardwareMap.get(DcMotor.class,"frontRight");
        backLeft  = hardwareMap.get(DcMotor.class,"backLeft") ;
        backRight = hardwareMap.get(DcMotor.class,"backRight");
-       sliderMotor = hardwareMap.get(DcMotor.class, "sliderMotor ")
+       sliderMotor = hardwareMap.get(DcMotor.class, "sliderMotor");
 
        frontLeft.setDirection( DcMotorSimple.Direction.REVERSE );
        backLeft.setDirection( DcMotorSimple.Direction.REVERSE );
