@@ -39,7 +39,7 @@ public class GabeTeleOp extends LinearOpMode {
 
             if(gamepad2.y){
                 slidesmotor.setPower(0.75);
-            }else if(slidesmotor.getCurrentPosition()>100){
+            }else if(slidesmotor.getCurrentPosition()>100) {
 
             }
 
