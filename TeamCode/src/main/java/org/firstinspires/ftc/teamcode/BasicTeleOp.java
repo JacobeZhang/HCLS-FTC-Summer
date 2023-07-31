@@ -46,5 +46,6 @@ public class BasicTeleOp extends LinearOpMode {
             backLeft.setPower(gamepad1.right_stick_x);
 
         }
-    }
+
 }
+
